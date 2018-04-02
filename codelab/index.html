@@ -334,6 +334,8 @@ Device Model Id: xxxxxx
 No traits</pre>
 <h2><strong>DeviceConfig</strong></h2>
 <p>다음으로 앞서 등록한 고유 식별자 및 사용 언어를 설정합니다. <code>AssistantActivity.java</code> 코드 내에서 <code>EmbeddedAssistant.Builde</code>r를 통해 <code>EmbeddedAssistant</code> 객체를 생성하는 부분을 찾습니다. 아래 주석 및 코드 내용을 참고해 어시스턴트 언어를 한국어로 설정하고,  앞서 등록한 <code>model_id</code>를 등록하고, 해당 디바이스를 식별할 수 있는 임의의 <code>InstanceId</code> 값을 설정하도록 코드를 수정합니다.</p>
+<aside class="warning"><p>현재 영어외의 정보가 올바르게 노출되지 않습니다. 언어 설정을 영어로 설정하기 위해서는 setLanguageCode("en-US")으로 작성하시면 됩니다.</p>
+</aside>
 <pre><code>mEmbeddedAssistant = new EmbeddedAssistant.Builder()
        .setCredentials(userCredentials)
        .setAudioInputDevice(audioInputDevice)
@@ -360,6 +362,8 @@ No traits</pre>
 </aside>
 <p><img style="max-width: 390.21px" src="img/5e120a97182a7c8d.png"></p>
 <p>사용자 음성 입력을 받기 위한 ‘NEW REQUEST&#39; 버튼이 하나 있는 허전한 Activity가 표시됩니다. 화면의 ‘New Request&#39; 버튼을 클릭한 후 ‘지금 몇시야&#39; 혹은 ‘너 이름은 뭐니?&#39; 라고 말해보세요.</p>
+<aside class="warning"><p>언어 설정을 영어로 하신경우에는 영어로 질문해보세요. 'what time is it now' 혹은 'what is your name'라고 말해보세요.</p>
+</aside>
 <p><img style="max-width: 566.50px" src="img/aae2407873d923e5.png"></p>
 <p>이어폰에 귀를 기울이세요. 감동적인 Google 어시스턴트 음성을 감상할 수 있습니다. 축하합니다. 여러분만의 Google 어시스턴트 빌트인 스피커 제작이 완료되었습니다!</p>
 
